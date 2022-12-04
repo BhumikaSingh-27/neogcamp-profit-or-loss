@@ -42,11 +42,12 @@ function calculateProfitLoss(initial, stocks, current) {
 }
 
 function clickEventHandler() {
-  const ip = initialPrice.value;
-  const qnty = stockQuantity.value;
-  const cur = currentPrice.value;
-  if (ip !== "" || qnty !== "" || qnty != "") {
-    calculateProfitLoss(Number(ip), Number(qnty), Number(cur));
+  const ip = Number(initialPrice.value);
+  const qnty = Number(stockQuantity.value);
+  const cur = Number(currentPrice.value);
+
+  if (ip > 0 && qnty > 0 && cur > 0) {
+    calculateProfitLoss(ip, qnty, cur);
   } else {
     showMessage("Invalid Input!");
   }
