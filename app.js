@@ -6,7 +6,7 @@ const output = document.querySelector("#output");
 const calculateProfitLossBtn = document.querySelector("#calculate-profit-loss");
 
 function showMessage(message, flag = 0) {
-  output.style.color = "black";
+  // output.style.color = "black";
   output.innerText = message;
 
   if (flag !== 2) {
